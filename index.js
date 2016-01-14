@@ -19,6 +19,9 @@ module.exports = re
  * @param {Object} opts
  * Options object.
  *
+ * @param {Boolean} [opts.global]
+ * Whether the RegExp should test against all possible matches in a string, or only against the first.
+ *
  * @param {Boolean} [opts.nil]
  * Whether to include the nil/empty UUID pattern.
  *
@@ -29,6 +32,6 @@ module.exports = re
 function re (opts) {
   return new RegExp(
     format('\\b(?:%s)\\b', regexp.versioned.source + ((opts || {}).nil ? '|' + regexp.nil.source : '')),
-    'i'
+    (opts || {}).global ? 'gi' : 'i'
   )
 }

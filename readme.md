@@ -37,6 +37,9 @@ uuid({ nil: true }).test('00000000-0000-0000-0000-000000000000')
 
 uuid().test('00000000-0000-0000-0000-000000000000')
 //=> false
+
+'Secret UUID is: {4d36e96e-e325-11ce-bfc1-08002be10318}'.replace(uuid({ global: true }), '*****')
+//=> 'Secret UUID is: {*****}'
 ```
 
 ###### RegExp
@@ -58,6 +61,7 @@ regexp.nil.source
 ###### arguments
 
  - `options.nil (Boolean)` Whether to include the nil/empty UUID pattern. (default: `false`)
+ - `options.global (Boolean)` Whether the RegExp should test against all possible matches in a string, or only against the first.
 
 ###### returns
 
