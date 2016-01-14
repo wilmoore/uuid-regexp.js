@@ -118,6 +118,6 @@ test('replace', function (t) {
 test('replace global', function (t) {
   var subject = 'RE: 94b6f09d-1eff-4d11-8740-4b9f7acb16e8 Contact Us [E8D6F4C2BA8C11E59912BA0BE0483C18]'
   var expected = 'RE:  Contact Us []'
-  t.equal(subject.replace(uuid({ global: true }), ''), expected)
+  t.equal(subject.replace(uuid({ flags: 'g' }), ''), expected)
   t.end()
 })
