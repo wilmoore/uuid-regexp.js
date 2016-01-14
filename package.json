@@ -1,7 +1,7 @@
 {
   "name": "uuid-regexp",
   "description": "RegExp for finding an RFC4122 compliant UUID in a string.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "bugs": {
     "url": "https://github.com/wilmoore/uuid-regexp.js/issues"
