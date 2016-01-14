@@ -1,0 +1,15 @@
+before_install:
+  - npm install -g npm
+
+cache:
+  directories:
+    - node_modules
+
+language: node_js
+
+node_js:
+  - 5
+  - 0.10
+  - 0.12
+
+sudo: false
